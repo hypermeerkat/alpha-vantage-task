@@ -1,0 +1,6 @@
+flask
+requests
+python-dotenv
+pytest
+pytest-mock
+flask-cors

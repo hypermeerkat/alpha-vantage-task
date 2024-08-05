@@ -1,0 +1,60 @@
+# Ignore Python virtual environment files
+venv/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore environment configuration files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.db
+*.sqlite3
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+
+# Ignore operating system generated files
+.DS_Store
+Thumbs.db
+
+# Ignore package manager directories
+node_modules/
+npm-debug.log
+
+# Ignore build output directories
+build/
+dist/
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore sensitive or personal files
+secrets.json
+config.ini
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+
+# Ignore documentation build files
+docs/_build/
+
+# Ignore any local settings file
+settings_local.py
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl

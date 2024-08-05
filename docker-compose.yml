@@ -1,0 +1,23 @@
+version: '3'
+services:
+  # Backend service configuration
+  backend:
+    build: ./alpha-vantage-task-backend  # Build the backend image from this directory
+    ports:
+      - "5000:5000"  # Map host port 5000 to container port 5000
+    environment:
+      - FLASK_APP=app.py  # Set the Flask application entry point
+      - FLASK_ENV=development  # Set Flask to development mode
+      - ALPHA_VANTAGE_API_KEY=${ALPHA_VANTAGE_API_KEY}  # Pass the API key as an environment variable
+    volumes:
+      - ./app:/app  # Mount the local app directory to the container's /app directory
+
+  # Frontend service configuration
+  frontend:
+    build: ./alpha-vantage-task-frontend  # Build the frontend image from this directory
+    ports:
+      - "3000:3000"  # Map host port 3000 to container port 3000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:5000  # Set the backend URL for the frontend to use
+    depends_on:
+      - backend  # Ensure the backend service is started before the frontend
