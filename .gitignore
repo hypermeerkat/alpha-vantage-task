@@ -67,3 +67,7 @@ override.tf.json
 terraform.rc
 terraform/.terraform/providers/
 .terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
